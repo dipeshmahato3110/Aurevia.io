@@ -1,82 +1,68 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
+    background-color: #f8f9fa;
 }
 
-.container {
-    display: flex;
+/* Left-Side Pattern */
+.pattern {
+    background-image: url('/images/Section.png'); /* Replace with your pattern image */
+    /* height: 960px; */
+}
+
+/* Right-Side Form */
+.form-container {
+    max-width: 360px;
     width: 100%;
+    padding: 20px;
 }
 
-.left-panel {
-    width: 789px;
-    height: 960;
-    background: url('/images/back.png') no-repeat center center/cover;
-}
-
-.right-panel {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-}
-
-.logo img {
+.logo {
     width: 50px;
+    height: auto;
 }
 
-.content{
-    padding-left: 32px;
+.company-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #050505;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-input {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.version {
-    margin-top: 20px;
+p {
     font-size: 0.9rem;
-    color: gray;
+    color: #6c757d;
+    margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
+.btn-primary {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-primary:hover {
+    background-color: #157347;
+    border-color: #157347;
+}
+
+@media (max-width: 991px) {
+    .pattern {
+        display: none;
     }
-    .left-panel {
-        width: 100%;
-        height: 40vh;
+    .form-container {
+        padding: 30px;
     }
-    .right-panel {
-        width: 100%;
-        height: 60vh;
-        padding: 1rem;
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.25rem;
     }
-    .header {
-        top: 10px;
-        left: 10px;
+    p {
+        font-size: 0.8rem;
     }
 }

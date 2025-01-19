@@ -1,0 +1,38 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+}
+.container {
+    padding: 15px;
+}
+.form-container {
+    padding: 30px;
+    max-width: 600px;
+}
+.form-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-container .btn-primary {
+    background-color: #198754;
+    border-color: #198754;
+}
+.form-container .btn-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #198754;
+}
+.form-container .btn-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .form-container {
+        padding: 20px;
+    }
+    .form-container h1 {
+        font-size: 1.25rem;
+    }
+}

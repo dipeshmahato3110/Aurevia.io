@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.pricing-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.pricing-section p {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #14532d;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .pricing-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .card h2 {
+        font-size: 1.25rem;
+    }
+}

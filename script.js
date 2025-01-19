@@ -1,8 +1,3 @@
-// Show the popup after 2 seconds
-setTimeout(() => {
-    document.getElementById("popup-modal").style.display = "flex";
-}, 2000);
-
 // Redirect function
 function redirectTo(page) {
     window.location.href = page;
@@ -65,7 +60,7 @@ function verifyOTP() {
     const defaultOTP = "1234";
 
     if (enteredOTP === defaultOTP) {
-        window.location.href = "success.html";
+        window.location.href = "pricing.html";
     } else {
         alert("Invalid OTP. Please try again.");
     }
