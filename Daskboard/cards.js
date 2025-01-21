@@ -24,6 +24,7 @@ new Chart(ctxx, {
 // card 2
 
 
+
 // Card 3
 const ctx = document.getElementById('recoveryRateChart').getContext('2d');
 new Chart(ctx, {
