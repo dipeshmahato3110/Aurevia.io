@@ -1,0 +1,54 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+/* Sidebar Navigation Styles */
+.sidebar .nav-link {
+    color: #000; /* Default text color */
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #198754; /* Green hover background */
+    color: #fff; /* White text on hover */
+}
+
+.sidebar .nav-link.active {
+    background-color: #198754; /* Green background for active */
+    color: #fff; /* White text for active */
+    font-weight: bold;
+}
+
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+}

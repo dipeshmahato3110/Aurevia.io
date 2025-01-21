@@ -4,18 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurevia.io</title>
-    <link rel="stylesheet" href="/CSS/home.css">
+    <title>Aurevia Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Daskboard/daskboard.css">
+    <link rel="stylesheet" href="/Daskboard/cards.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <img src="/images/logo.png" alt="Aurevia.io Logo" class="logo">
-        <h1>Aurevia.io</h1>
-        <p class="subtitle">The future of technology</p>
-    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-12 col-md-3 col-lg-2 bg-light sidebar position-fixed">
+                <div class="d-flex flex-column vh-100">
+                    <div class="text-center py-4">
+                        <img src="/images/logo.png" alt="Logo" class="mb-2">
+                        <h4>Aurevia.io</h4>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/Daskboard/daskboard.html" id="dashboard-link"><i class="bi bi-grid-fill"></i>
+                                Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="product-management-link"><i class="bi bi-box"></i> Product
+                                Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="ai-training-link"><i class="bi bi-lightbulb"></i> AI
+                                Training</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="chat-setting-link"><i class="bi bi-chat-dots"></i> Chat
+                                Setting</a>
+                        </li>
+                    </ul>
 
-            <script src="script.js"></script>
+                    <hr>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-bell"></i> Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a>
+                        </li>
+                    </ul>
+                    <div class="mt-auto text-center py-3">
+                        <img src="https://via.placeholder.com/60" class="rounded-circle mb-2" alt="User">
+                        <p class="mb-1">DM</p>
+                        <small>dm@Aurevia.com</small>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-12 col-md-9 ms-md-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between align-items-center pt-3 pb-2 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                    <button class="btn btn-success">Test Chat</button>
+                </div>
+                <p>Manage the sources of knowledge for your AI agent</p>
+                <div class="row g-4">
+                    <!-- First row -->
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm" id="card-1">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <span>Customer Segmentation</span>
+                                <div>
+                                    <i class="bi bi-pin-angle"></i>
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="customer-segmentation-chart" style="max-height: 150px;"></canvas>
+                                <div class="mt-3">
+                                    <p>
+                                        <span class="legend-indicator" style="background-color: #FF6B6B;"></span>
+                                         Segment A </p>
+                                    <p>
+                                        <span class="legend-indicator" style="background-color: #4CAF50;"></span>
+                                         Segment B </p>
+                                    <p>
+                                        <span class="legend-indicator" style="background-color: #FFD700;"></span>
+                                         Segment C </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm" id="card-1">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <span>ROI on Promotions</span>
+                                <div>
+                                    <i class="bi bi-pin-angle"></i>
+                                    <i class="bi bi-arrows-fullscreen" onclick="toggleFullscreen('roi-on-promotions-card')"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="roi-on-promotions-chart" style="max-height: 200px;"></canvas>
+                                <div class="mt-3">
+                                    <p>
+                                        <span class="dot" style="background-color: #4CAF50;"></span>
+                                        ROI
+                                    </p>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm" id="card-1">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <span>Abandoned Cart Recovery Rate</span>
+                                <div>
+                                    <i class="bi bi-pin" title="Pin"></i>
+                                    <i class="bi bi-arrows-fullscreen" title="Fullscreen"
+                                        onclick="toggleFullscreen('card-1')"></i>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <canvas id="recoveryRateChart" style="max-height: 200px;"></canvas>
+                                <div class="mt-3">
+                                    <p class="text-danger note">
+                                        <span class="legend-indicator" style="background-color: #FF6B6B;"></span>
+                                        Not recovered - 32
+                                    </p>
+                                    <p class="text-success note">
+                                        <span class="legend-indicator" style="background-color: #4CAF50;"></span>
+                                        Recovered - 68
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second row -->
+                     <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Demand Forecasting</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Engagement Trends</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Top-Performing Products</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third row -->
+                     <!-- Card 7 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Low-Stock Alerts</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Sales</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Conversion Rates</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Customer Segmentation</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">ROI on Promotions</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Customer Segmentation</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 13 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">ROI on Promotions</h5>
+                                <img src="https://via.placeholder.com/300x200" alt="Chart" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/Daskboard/cards.js"></script>
+    <script src="/Daskboard/daskboard.js"></script>
 </body>
 
 </html>
