@@ -1,0 +1,21 @@
+/* Sidebar active link styling */
+.nav-link.active {
+    background-color: #e0f7fa;
+    color: #0e501d; 
+    font-weight: bold;
+  }
+  
+  /* User profile image */
+  .user-profile img {
+    object-fit: cover;
+  }
+
+  .sidebar-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar-link:hover {
+    background-color: #65df81; /* Light green background */
+    color: #0a7222;           /* Green text */
+  }
+  
