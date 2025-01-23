@@ -39,6 +39,11 @@ body {
   object-fit: cover;
 }
 
+.icon-img{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 /* Main Content */
 main {
   margin-left: 250px;
