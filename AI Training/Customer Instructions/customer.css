@@ -1,48 +1,88 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-  }
-  
-  /* Sidebar */
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 19.5rem;
+  height: 44rem;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: white;
+}
+
+.sidebar .logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.sidebar .nav-link {
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .nav-link img {
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .nav-link:hover {
+  color: #008D6F;
+}
+
+.sidebar .nav-link:hover img {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(61%) saturate(733%) hue-rotate(90deg) brightness(87%) contrast(85%);
+}
+
+.sidebar .nav-link.active {
+  background-color: #EDFCF2;
+  color: #008D6F;
+  height: 2.5rem;
+  width: 17.5rem;
+}
+
+.sidebar .nav-link.active img {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(61%) saturate(733%) hue-rotate(90deg) brightness(87%) contrast(85%);
+}
+
+/* User profile image */
+.user-profile img {
+  object-fit: cover;
+}
+
+.icon-img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* user image */
+.rounded-circle{
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 12.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .sidebar {
-    width: 250px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
+      position: relative;
+      width: 100%;
   }
-  
-  .sidebar .logo {
-    max-width: 150px;
-  }
-  
-  .sidebar .nav-link {
-    color: #000;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .sidebar .nav-link:hover {
-    /* background-color: #d9f7db; */
-    color: #28a745;
-  }
-  
-  .sidebar .nav-link.active {
-    background-color: #d9f7db;
-    color: #28a745;
-  }
-  
-  /* User profile image */
-  .user-profile img {
-    object-fit: cover;
-  }
+}
+
   
   /* Main Content */
   main {
-    margin-left: 250px;
-    padding: 20px;
+    margin-left: 22rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 70.5rem;
   }
   
   /* Tabs */
@@ -76,6 +116,7 @@ body {
     background-color: #28a745;
     border: none;
     transition: all 0.3s ease-in-out;
+    margin-right: 3rem;
   }
   
   .btn-success:hover {
