@@ -502,24 +502,83 @@
                         <img src="/images/Featured icon.png" alt="">
                     </div>
                 </div>
-                <h5><b>Add New Source</b></h5>
                 <div class="modal-body">
-                    <form>
-                        <label><input class="form" type="radio" name="source" />
-                            <img class="img-form" src="/images/Single.png" alt=""> Single page website</label><br>
-                        <label><input class="form" type="radio" name="source" />
-                            <img class="img-form" src="/images/multi.png" alt=""> Multi page website</label><br>
-                        <label><input class="form" type="radio" name="source" />
-                            <img class="img-form" src="/images/Text.png" alt=""> Custom Text</label><br>
-                        <label><input class="form" type="radio" name="source" />
-                            <img class="img-form" src="/images/CSV.png" alt=""> List of links (CSV)</label><br>
-                        <label><input class="form" type="radio" name="source" />
-                            <img class="img-form" src="/images/XML.png" alt=""> Sitemap (XML)</label>
-                    </form>
+                    <h5 class="modal-title mb-4" id="addSourceModalLabel">Add new source</h5>
+                    <!-- Single page -->
+                    <div class="form-check mb-3">
+                        <label class="radio-label form-check-label">
+                            <input class="form-check-input" type="radio" name="sourceOption" id="singlePage"
+                                value="singlePage">
+                            <img src="/images/Single.png" alt="Single Page" width="24">
+                            Single page website
+                        </label>
+                    </div>
+
+                    <!-- Additional Input for Single Page Website -->
+                    <div id="singlePageInput" class="additional-input d-none">
+                        <label for="singlePageURL" class="form-label text-start" style="color: #F58720;">Add
+                            Link</label>
+                        <input type="url" class="form-control" id="singlePageURL" placeholder="https://">
+                    </div>
+
+                    <!-- multi page -->
+                    <div class="form-check mb-3">
+                        <label class="radio-label form-check-label">
+                            <input class="form-check-input" type="radio" name="sourceOption" id="multiPage"
+                                value="multiPage">
+                            <img src="/images/multi.png" alt="Multi Page" width="24">
+                            Multi page website
+                        </label>
+                    </div>
+
+                    <!-- Additional Input for Multi Page Website -->
+                    <div id="multiPageInput" class="additional-input d-none">
+                        <label for="multiPageURL" class="form-label text-start" style="color: #4977eb;">Add Link</label>
+                        <input type="url" class="form-control" id="multiPageURL" placeholder="https://">
+                    </div>
+
+                    <!-- Custom Text -->
+                    <div class="form-check mb-3">
+                        <label class="radio-label form-check-label">
+                            <input class="form-check-input" type="radio" name="sourceOption" id="customText"
+                                value="customText">
+                            <img src="/images/Text.png" alt="CustomTExt" width="24">
+                            Custom Text
+                        </label>
+                    </div>
+
+                    <!-- Additional Input for Multi Page Website -->
+                    <div id="customTextInput" class="additional-input d-none">
+                        <label for="customTextURL" class="form-label text-start" style="color: #9F47BF;">Text</label>
+                        <textarea name="" id="customTextURL" class="form-control text" placeholder="Add text here"></textarea>
+                        <!-- <input type="url" class="form-control text" id="customTextURL" placeholder="Add text here"> -->
+                    </div>
+                    <!-- 
+                    <div class="form-check mb-3">
+                        <label class="radio-label form-check-label">
+                            <input class="form-check-input" type="radio" name="sourceOption" id="customText">
+                            <img src="/images/Text.png" alt="Custom Text" width="24">
+                            Custom Text
+                        </label>
+                    </div> -->
+                    <div class="form-check mb-3">
+                        <label class="radio-label form-check-label">
+                            <input class="form-check-input" type="radio" name="sourceOption" id="csvList">
+                            <img src="/images/CSV.png" alt="CSV List" width="24">
+                            List of links (CSV)
+                        </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <label class="radio-label form-check-label">
+                            <input class="form-check-input" type="radio" name="sourceOption" id="sitemap">
+                            <img src="/images/XML.png" alt="Sitemap" width="24">
+                            Sitemap (XML)
+                        </label>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-light secondary btn-outline-secondary" id="cancel-btn">Cancel</button>
-                    <button class="btn btn-success primary">Add Source</button>
+                    <button class="btn btn-success primary" id="addSourceButton">Add Source</button>
                 </div>
             </div>
         </div>

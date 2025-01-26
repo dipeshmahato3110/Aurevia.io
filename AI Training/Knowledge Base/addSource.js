@@ -30,3 +30,83 @@ modalOverlay.addEventListener('click', (e) => {
     content.classList.remove('blur-active'); // Remove blur effect
   }
 });
+
+
+// Add functionality for the "Add source" button
+document.getElementById('addSourceButton').addEventListener('click', function () {
+  const selectedOption = document.querySelector('input[name="sourceOption"]:checked');
+  if (selectedOption) {
+      alert('Source added');
+  } else {
+      alert('Please select a source option!');
+  }
+});
+
+// Single page
+// Add functionality to toggle the single page input field
+document.addEventListener('DOMContentLoaded', function () {
+    const singlePageRadio = document.getElementById('singlePage');
+    const singlePageInput = document.getElementById('singlePageInput');
+
+    singlePageRadio.addEventListener('change', function () {
+        if (this.checked) {
+            singlePageInput.classList.remove('d-none');
+        }
+    });
+
+    // Ensure the input is hidden when selecting other options
+    const otherRadios = document.querySelectorAll('input[name="sourceOption"]');
+    otherRadios.forEach((radio) => {
+        radio.addEventListener('change', function () {
+            if (!singlePageRadio.checked) {
+                singlePageInput.classList.add('d-none');
+            }
+        });
+    });
+});
+
+// Multi page
+// Add functionality to toggle the multi page input field
+document.addEventListener('DOMContentLoaded', function () {
+    const multiPageRadio = document.getElementById('multiPage');
+    const multiPageInput = document.getElementById('multiPageInput');
+
+    multiPageRadio.addEventListener('change', function () {
+        if (this.checked) {
+            multiPageInput.classList.remove('d-none');
+        }
+    });
+
+    // Ensure the input is hidden when selecting other options
+    const otherRadios = document.querySelectorAll('input[name="sourceOption"]');
+    otherRadios.forEach((radio) => {
+        radio.addEventListener('change', function () {
+            if (!multiPageRadio.checked) {
+                multiPageInput.classList.add('d-none');
+            }
+        });
+    });
+});
+
+// Custom Text
+// Add functionality to toggle the custom text input field
+document.addEventListener('DOMContentLoaded', function () {
+  const customTextRadio = document.getElementById('customText');
+  const customTextInput = document.getElementById('customTextInput');
+
+  customTextRadio.addEventListener('change', function () {
+      if (this.checked) {
+          customTextInput.classList.remove('d-none');
+      }
+  });
+
+  // Ensure the input is hidden when selecting other options
+  const otherRadios = document.querySelectorAll('input[name="sourceOption"]');
+  otherRadios.forEach((radio) => {
+      radio.addEventListener('change', function () {
+          if (!customTextRadio.checked) {
+              customTextInput.classList.add('d-none');
+          }
+      });
+  });
+});

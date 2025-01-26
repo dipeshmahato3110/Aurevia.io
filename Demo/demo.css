@@ -1,0 +1,69 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-content {
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #d4f1d4;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.icon-container i {
+    font-size: 1.5rem;
+    color: #28a745;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.radio-label img {
+    margin-right: 10px;
+}
+
+.btn-cancel {
+    background-color: #f1f1f1;
+    border: none;
+    color: #6c757d;
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: white;
+}
+/* single page input */
+.additional-input {
+    margin-top: 15px;
+}
+
+/* Text Box Styling */
+#custom-text-box {
+    margin-top: 15px;
+  }
+  
