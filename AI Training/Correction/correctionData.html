@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrections</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/AI Training/Correction/correctionData.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="sidebar bg-light border-end">
+            <div>
+                <div class="d-flex align-items-center px-4 p-4">
+                    <img src="/images/logo.png" alt="Logo" class="logo me-2">
+                    <h2 class="fs-4 mb-0"><b>Aurevia.io</b></h2>
+                </div>
+                <ul class="nav flex-column mb-3 px-3">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="/Daskboard/daskboard.html">
+                            <img src="/images/dashboard.png" class="icon-img me-2" alt="Dashboard Icon">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <img src="/images/productManagement.png" class="icon-img me-2"
+                                alt="Product Management Icon">
+                            Product Management
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active d-flex align-items-center"
+                            href="/AI Training/Correction/correction.html">
+                            <img src="/images/ai.png" class="icon-img me-2" alt="AI Training Icon">
+                            AI Training
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <img src="/images/chat.png" class="icon-img me-2" alt="Chat Setting Icon">
+                            Chat Setting
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <ul class="nav flex-column px-3 mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <img src="/images/notification.png" class="icon-img me-2" alt="Notifications Icon">
+                            Notifications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#">
+                            <img src="/images/settings.png" class="icon-img me-2" alt="Settings Icon">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="d-flex px-3 mb-3">
+                    <img src="/images/photo.jpg" alt="User" class="rounded-circle me-3">
+                    <div>
+                        <p class="mb-0">Dipesh Mahato</p>
+                        <small class="text-muted">dipesh@Aurevia.com</small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 content-container p-3 px-5 ">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="h2">AI Training</h1>
+                    <p class="text-muted">Manage the sources of knowledge for your AI agent</p>
+                </div>
+                <button class="btn btn-success" id="openChatbot">Test Chat</button>
+            </div>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs mb-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="/AI Training/Knowledge Base/knowledge.html">Knowledge Base</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/AI Training/Correction/correction.html">Corrections</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/AI Training/Customer Instructions/customer.html">Custom Instructions</a>
+                </li>
+            </ul>
+
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0"><b>Correction</b> </h3>
+                    <button class="btn btn-primary" id="add-source-btn">Create Correction</button>
+                </div>
+
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <td scope="col">Created</td>
+                            <td scope="col" class="lastRefresh">Last Refresh</td>
+                            <td scope="col">Expire</td>
+                            <td scope="col">Date Create</td>
+                            <td scope="col">Actions</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Not sure what to ask</td>
+                            <td class="lastRefresh">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio
+                                dictumst tempus magna elit cras posuere cursus pulvinar id. Facilisis at eu amet ornare
+                                enim arcu malesuada rutrum a.</td>
+                            <td>Never</td>
+                            <td>20/12/24</td>
+                            <td>
+                                <img class="" src="/images/delete.png" alt="">
+                                <img class="image" src="/images/edit-01.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Not sure what to ask</td>
+                            <td class="lastRefresh">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio
+                                dictumst tempus magna elit cras posuere cursus pulvinar id. Facilisis at eu amet ornare
+                                enim arcu malesuada rutrum a.</td>
+                            <td>20/12/24</td>
+                            <td>20/12/24</td>
+                            <td>
+                                <img class="" src="/images/delete.png" alt="">
+                                <img class="image" src="/images/edit-01.png" alt="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Not sure what to ask</td>
+                            <td class="lastRefresh">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio
+                                dictumst tempus magna elit cras posuere cursus pulvinar id. Facilisis at eu amet ornare
+                                enim arcu malesuada rutrum a.</td>
+                            <td>Never</td>
+                            <td>20/12/24</td>
+                            <td>
+                                <img class="" src="/images/delete.png" alt="">
+                                <img class="image" src="/images/edit-01.png" alt="">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="nav-area">
+                    <button class="btn btn-outline-secondary btn-sm">
+                        <img class="arrow" src="/images/arrow-left.png" alt="">
+                        Previous</button>
+                    <nav>
+                        <ul class="pagination mb-0">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">8</a></li>
+                            <li class="page-item"><a class="page-link" href="#">9</a></li>
+                            <li class="page-item"><a class="page-link" href="#">10</a></li>
+                        </ul>
+                    </nav>
+                    <button class="btn btn-outline-secondary btn-sm">Next
+                        <img class="arrow" src="/images/arrow-right.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chatbot Modal -->
+        <div class="chatbot-modal" id="chatbotModal">
+            <div class="chatbot-content">
+                <button class="btn-close" id="closeChatbot"><img src="/images/x-close.png" alt=""></button>
+                <h4><b>Test Chatbot</b></h4>
+                <div class="chatbot-messages">
+                    <p style="size: 0.9rem;text-align: right; ">Lorem ipsum dolor sit amet, consectetur</p>
+
+                    <div class="chatbot-reply" style="background-color: #EDFCF2;">
+                        <h6 style="color: #087443;">Chat Bot</h6>
+                        <p style="size: 0.9rem; text-align: left;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Odio dictumst tempus magna elit cras posuere cursus pulvinar id. Facilisis at eu amet
+                            ornare enim arcu malesuada rutrum a.</p>
+                    </div>
+                    <h6 style="color: #087443;" class="correction">Make a Correction</h6>
+                </div>
+                <div class="chatbot-input mb-4">
+
+                    <input type="text" class="form-control" placeholder="Start conversation"
+                        src="/images/arrow-circle-right.png">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal-overlay d-none" id="modal-overlay">
+            <div class="modal-container">
+                <button class="close-btn" id="close-btn">&times;</button>
+                <div class="modal-header">
+                    <div class="icon-circle">
+                        <img src="/images/Featured icon.png" alt="">
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <h5 class="modal-title mb-4" id="addSourceModalLabel">Create Correction</h5>
+                    <!-- Input -->
+                    <div class="form-check mb-3">
+                        <label for="correction" class="form-label text-start" style="color: #0c0c0c;">Customer
+                            message</label>
+                        <textarea name="" id="#" class="form-control text"
+                            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea>
+                        <p style="color: #667085;">Aurevia will look at similar messages and take your correction into consideration. </p>
+                    </div>
+                    <div class="form-check mb-3">
+                        <label for="correction" class="form-label text-start" style="color: #0c0c0c;">Revised
+                            response</label>
+                        <textarea name="" id="customTextURL" class="form-control text" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio dictumst tempus magna elit cras posuere cursus pulvinar id. Facilisis at eu amet ornare enim arcu malesuada rutrum a."></textarea>
+                    </div>
+                    <div class="form-check mb-3">
+                        <label class="radio-label form-check-label">
+                            <input class="form-check-input" type="radio" name="sourceOption" id="correction"
+                                value="correction">
+                            <p style="color: #667085;">This correction will never expire</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light secondary btn-outline-secondary" id="cancel-btn">Cancel</button>
+                    <button class="btn btn-success primary" id="addSourceButton">Save</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/AI Training/Correction/creatCorrection.js"></script>
+    <script src="/AI Training/Correction/correction.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

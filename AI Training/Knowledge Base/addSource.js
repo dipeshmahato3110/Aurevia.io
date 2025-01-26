@@ -1,4 +1,4 @@
-// Get elements
+// Add new source module
 const addSourceBtn = document.getElementById('add-source-btn');
 const modalOverlay = document.getElementById('modal-overlay');
 const closeBtn = document.getElementById('close-btn');
@@ -30,7 +30,6 @@ modalOverlay.addEventListener('click', (e) => {
     content.classList.remove('blur-active'); // Remove blur effect
   }
 });
-
 
 // Add functionality for the "Add source" button
 document.getElementById('addSourceButton').addEventListener('click', function () {

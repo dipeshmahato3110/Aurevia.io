@@ -85,16 +85,16 @@ main {
   width: 70.5rem;
 }
 
-/* Tabs */
-.nav-tabs .nav-link {
-  border: none;
-  color: #6c757d;
-}
-
-.nav-tabs .nav-link.active {
-  color: #28a745;
-  border-bottom: 2px solid #28a745;
-}
+  /* Tabs */
+  .nav-tabs .nav-link {
+    color: #6c757d;
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: #28a745;
+    color: #ffffff;
+    /* border-bottom: 2px solid #28a745; */
+  }
 
 /* Content Area */
 .text-center img {

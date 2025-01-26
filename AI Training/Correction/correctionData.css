@@ -97,13 +97,13 @@ body {
   }
   /* Tabs */
   .nav-tabs .nav-link {
-    border: none;
     color: #6c757d;
   }
   
   .nav-tabs .nav-link.active {
-    color: #28a745;
-    border-bottom: 2px solid #28a745;
+    background-color: #28a745;
+    color: #ffffff;
+    /* border-bottom: 2px solid #28a745; */
   }
   
   /* Content Area */
@@ -328,7 +328,7 @@ body {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 25rem;
+    width: 43rem;
     position: relative;
   
   }
@@ -360,14 +360,14 @@ body {
   
   
   .secondary{
-  width: 9.5rem;
+  width: 20rem;
   
   }
   
   .primary{
   background-color: #087443;
   color: white;
-  width: 9.5rem;
+  width: 20rem;
   }
   
   .primary:hover{
@@ -387,6 +387,12 @@ body {
   
   /* Custom text */
   .text{
-    height: 11rem;
-    width: 22rem;
+    height: 6rem;
+    width: 38rem;
   }
+
+  .lastRefresh{
+    width: 33rem;
+  }
+
+  
