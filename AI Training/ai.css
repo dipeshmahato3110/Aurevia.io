@@ -133,3 +133,156 @@ main {
       margin-left: 0;
   }
 }
+
+/* Chatbox */
+.content-container {
+  transition: filter 0.1s ease-in-out;
+}
+
+.content-container.blurred {
+  filter: blur(5px); /* Blur effect when chatbot is active */
+  pointer-events: none;
+  
+}
+
+.chatbot-modal {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hidden by default */
+  height: 100%;
+  width: 25rem;
+  background: #ffffff;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.chatbot-modal.active {
+  right: 0; /* Slide in */
+}
+
+.chatbot-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rempx;
+  cursor: pointer;
+}
+
+.chatbot-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.chatbot-messages {
+  margin-top: 20rem;
+}
+
+.chatbot-reply {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* Modal for Add source*/
+/* Modal Styles */
+.modal-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 22rem;
+  position: relative;
+
+}
+
+/* Close Button Styles */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+
+
+.secondary{
+width: 9.5rem;
+
+}
+
+.primary{
+background-color: #087443;
+color: white;
+width: 9.5rem;
+}
+
+.primary:hover{
+background-color: #28a745;
+}
+
+.img-form{
+height: 1.5rem;
+width: 1.5rem;
+}
+
+.btn-outline-secondary{
+  color: #000;
+}
+
+.btn-outline-secondary:hover{
+  background-color: #000;
+  color: white;
+}
+
+.btn-primary{
+  background-color: #000;
+}
+.btn-primary:hover{
+  background-color: black;
+}

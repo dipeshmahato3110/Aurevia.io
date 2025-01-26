@@ -71,13 +71,13 @@
     </nav>
 
         <!-- Main Content -->
-        <main class="flex-grow-1 p-4 px-0">
+        <main class="flex-grow-1 p-4 px-0 content-container">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h1 class="h2">AI Training</h1>
                     <p class="text-muted">Manage the sources of knowledge for your AI agent</p>
                 </div>
-                <button class="btn btn-success">Test Chat</button>
+                <button class="btn btn-success" id="openChatbot">Test Chat</button>
             </div>
 
             <!-- Tabs -->
@@ -98,11 +98,69 @@
                 <img src="/images/Knowledge.png" alt="No Data" class="img-fluid mb-3" style="max-width: 300px;">
                 <h3 class="mb-2">No Data uploaded</h3>
                 <p class="text-muted mb-4">Start uploading content to train your model</p>
-                <button class="btn btn-dark">+ Add new source</button>
+                <button class="btn btn-primary" id="add-source-btn">+ Add new source</button>
             </div>
         </main>
+
+                <!-- Chatbot Modal -->
+                <div class="chatbot-modal" id="chatbotModal">
+                    <div class="chatbot-content">
+                        <button class="btn-close" id="closeChatbot"><img src="/images/x-close.png" alt=""></button>
+                        <h4><b>Test Chatbot</b></h4>
+                        <div class="chatbot-messages">
+                            <p style="size: 0.9rem;text-align: right; ">Lorem ipsum dolor sit amet, consectetur</p>
+        
+                            <div class="chatbot-reply" style="background-color: #EDFCF2;">
+                                <h6 style="color: #087443;">Chat Bot</h6>
+                                <p style="size: 0.9rem; text-align: left;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Odio dictumst tempus magna elit cras posuere cursus pulvinar id. Facilisis at eu amet
+                                    ornare enim arcu malesuada rutrum a.</p>
+                            </div>
+                            <h6 style="color: #087443;" class="correction">Make a Correction</h6>
+                        </div>
+                        <div class="chatbot-input mb-4">
+        
+                            <input type="text" class="form-control" placeholder="Start conversation"
+                                src="/images/arrow-circle-right.png">
+                        </div>
+        
+                    </div>
+                </div>
+
+                <!-- Modal -->
+        <div class="modal-overlay d-none" id="modal-overlay">
+            <div class="modal-container">
+                <button class="close-btn" id="close-btn">&times;</button>
+                <div class="modal-header">
+                    <div class="icon-circle">
+                        <img src="/images/Featured icon.png" alt="">
+                    </div>
+                </div>
+                <h5><b>Add New Source</b></h5>
+                <div class="modal-body">
+                    <form>
+                        <label><input class="form" type="radio" name="source" />
+                            <img class="img-form" src="/images/Single.png" alt=""> Single page website</label><br>
+                        <label><input class="form" type="radio" name="source" />
+                            <img class="img-form" src="/images/multi.png" alt=""> Multi page website</label><br>
+                        <label><input class="form" type="radio" name="source" />
+                            <img class="img-form" src="/images/Text.png" alt=""> Custom Text</label><br>
+                        <label><input class="form" type="radio" name="source" />
+                            <img class="img-form" src="/images/CSV.png" alt=""> List of links (CSV)</label><br>
+                        <label><input class="form" type="radio" name="source" />
+                            <img class="img-form" src="/images/XML.png" alt=""> Sitemap (XML)</label>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light secondary btn-outline-secondary" id="cancel-btn">Cancel</button>
+                    <button class="btn btn-success primary">Add Source</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 
+    <script src="/AI Training/Knowledge Base/addSource.js"></script>
     <script src="/AI Training/ai.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -76,10 +76,10 @@
         </nav>
 
             <!-- Main Content -->
-            <main class="col-12 col-md-9 col-lg-9 px-0">
+            <main class="col-12 col-md-9 col-lg-9 px-0 content-container">
                 <div class="d-flex justify-content-between align-items-center pt-3 pb-2 border-bottom">
                     <h1 class="h2">Dashboard</h1>
-                    <button class="btn btn-success">Test Chat</button>
+                    <button class="btn btn-success" id="openChatbot">Test Chat</button>
                 </div>
                 <p>Manage the sources of knowledge for your AI agent</p>
                 <div class="row g-4">
@@ -252,6 +252,30 @@
                     </div>
                 </div>
             </main>
+
+                    <!-- Chatbot Modal -->
+        <div class="chatbot-modal" id="chatbotModal">
+            <div class="chatbot-content">
+                <button class="btn-close" id="closeChatbot"><img src="/images/x-close.png" alt=""></button>
+                <h4><b>Test Chatbot</b></h4>
+                <div class="chatbot-messages">
+                    <p style="size: 0.9rem;text-align: right; ">Lorem ipsum dolor sit amet, consectetur</p>
+
+                    <div class="chatbot-reply" style="background-color: #EDFCF2;">
+                        <h6 style="color: #087443;">Chat Bot</h6>
+                        <p style="size: 0.9rem; text-align: left;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Odio dictumst tempus magna elit cras posuere cursus pulvinar id. Facilisis at eu amet
+                            ornare enim arcu malesuada rutrum a.</p>
+                    </div>
+                    <h6 style="color: #087443;" class="correction">Make a Correction</h6>
+                </div>
+                <div class="chatbot-input mb-4">
+
+                    <input type="text" class="form-control" placeholder="Start conversation"
+                        src="/images/arrow-circle-right.png">
+                </div>
+
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
