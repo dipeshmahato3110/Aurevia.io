@@ -554,14 +554,22 @@
     
                     </div>
                     
-                    <!-- CSV -->
-                    <div class="form-check mb-3">
-                        <label class="radio-label form-check-label">
-                            <input class="form-check-input" type="radio" name="sourceOption" id="csvList">
-                            <img src="/images/CSV.png" alt="CSV List" width="24">
-                            List of links (CSV)
-                        </label>
-                    </div>
+                    <!-- CSV Radio Button -->
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="sourceOption" id="csvOption">
+            <label class="form-check-label d-flex align-items-center" for="csvOption">
+                <img src="/images/CSV.png" alt="CSV" width="24">
+                <span>List of Links (CSV)</span>
+            </label>
+        </div>
+
+        <!-- CSV Input Section -->
+        <div id="csvInput">
+            <label for="multiPageURL" class="form-label text-start" style="color: #37a547;">Text</label>
+            <input type="file" id="csvFileUpload" class="form-control" accept=".csv">
+        </div>
+
+
 
                     <!-- XML -->
                     <div class="form-check mb-3">
