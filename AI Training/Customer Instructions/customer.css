@@ -80,9 +80,21 @@ body {
   /* Main Content */
   main {
     margin-left: 22rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     width: 70.5rem;
+    height: 60rem;
+    align-self: stretch;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem 0 3rem;
+    background-color: #fff;
+  }
+
+  .content{
+    width: 66.5;
   }
   
   /* Tabs */
@@ -97,6 +109,13 @@ body {
   }
   
   /* Content Area */
+  .text-center{
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
   .text-center img {
     opacity: 0.8;
   }
